@@ -3,7 +3,6 @@ const albumTitle = document.querySelector("#album-title");
 const albumDescription = document.querySelector("#album-description");
 const albumArt = document.querySelector("#album-art");
 
-
 // test if input of title and desc are empty on submit
 saveAlbumForm.addEventListener("submit", onSaveAlbum);
 
@@ -82,5 +81,16 @@ function onSelectArt(e) {
         albumArt.classList.remove("is-invalid");
     }
 
+    function render(params) {
+        const template = `<div class="col">
+        <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="ALBUM IMAGE SELECTION HERE" />
+            <div class="card-body">
+                <h5 class="card-title">ALBUM DESCRIPTION HERE</h5>
+                <p class="card-text">ALBUM TITLE HERE</p>
+            </div>
+        </div>
+    </div>`
+    }
 }
 
