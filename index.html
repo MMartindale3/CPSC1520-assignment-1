@@ -23,7 +23,7 @@
 		<link rel="stylesheet" type="text/css" href="css/cover.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 
-		<script src="js/index.js"></script>
+		<script src="js/index.js" defer></script>
 	</head>
 
 	<body class="h-100 text-white bg-light">
@@ -97,7 +97,7 @@
 								type="text"
 								class="form-control"
 								placeholder="Album Title" />
-							<div class="invalid-feedback">Invalid Album Name</div>
+							<div id="titleFeedback" class="invalid-feedback">Invalid Album Name: Must be 1-15 characters</div>
 						</div>
 						<div class="col-lg-6 mb-1">
 							<input
@@ -106,17 +106,17 @@
 								type="text"
 								class="form-control"
 								placeholder="short album description" />
-							<div class="invalid-feedback">Invalid Description Name</div>
+							<div id="descriptionFeedback" class="invalid-feedback">Invalid Description: Must be 1-30 characters</div>
 						</div>
 						<div class="col-lg-2 mb-1">
-							<select name="album-art" class="form-select" id="album-art ">
+							<select name="album-art" class="form-select" id="album-art">
 								<option selected value="">Select album art</option>
 								<option value="mountains.jpg">Mountains</option>
 								<option value="gazing_at_stars.jpg">Gazing at stars</option>
 								<option value="cassette.jpg">Casette</option>
 								<option value="tv.jpg">TV Stand</option>
 							</select>
-							<div class="invalid-feedback">Select album art</div>
+							<div id="artFeed" class="invalid-feedback">Select album art</div>
 						</div>
 						<div class="col-lg mb-1">
 							<button id="submit-btn" type="submit" class="btn btn-primary w-100">Save</button>
